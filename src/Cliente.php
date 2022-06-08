@@ -1,27 +1,29 @@
 <?php
 class Cliente {
     // Propriedades (ou atributos)
-    public string $nome;
-    public string $email;
-    public string $senha;
-    public array $telefones;
+    private string $nome;
+    private string $email;
+    private string $senha;
 
-
-    // dentro da classe, sempre usar o "$this" para acesso aos atributos.
-    public function exibirDados() {
-        echo "<h3> $this->nome </h3>";
-        echo "<ul>";
-            echo "<li> $this->email </li>";
-            echo "<li>" .implode(", ",$this->telefones)."</li>";
-        echo "</ul>";
+    // Métodos getters
+    public function getNome():string {
+        return $this->nome;
     }
-
-
-    // // Método construtor (exemplo2)
-    // public function __construct(string $nome, string $email )
-    // {
-    //     // $this é uma variável especial, sempre apontando para a referência da classe atualmente manupulada.
-    //     $this->nome = $nome;
-    //     $this->email = $email;
-    // }
+    public function getEmail():string {
+        return $this->email;
+    }
+    public function getSenha():string {
+        return $this->senha;
+    }
+    
+    // setter
+    public function setNome(string $nome) {
+        $this->nome = $nome;
+    }
+    public function setEmail(string $email) {
+        $this->email = $email;
+    }
+    public function setSenha(string $senha) {
+        $this->senha = password_hash($senha, PASSWORD_DEFAULT);
+    }
 }
