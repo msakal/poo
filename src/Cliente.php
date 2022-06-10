@@ -1,11 +1,15 @@
 <?php
-class Cliente {
+
+// Criando como classe 'abstract', a classe só pode ser chamada pelas classes dependentes
+// --> NÃO PERMITE SER CHAMADA DE FORMA INDIVIDUAL (DIRETA), não pode ser INSTANCIADAS.
+abstract class Cliente {
     // Propriedades (ou atributos)
     private string $nome;
     private string $email;
     private string $senha;
 
-    // Métodos getters
+    // MÉTODOS
+    // getters
     public function getNome():string {
         return $this->nome;
     }
