@@ -30,7 +30,7 @@
     td:first-child {
         text-transform: uppercase;
     }
-    td:nth-child(3n) {
+    td:nth-child(3), td:nth-child(7) {
         text-align: center;
     }
     </style>
@@ -106,7 +106,8 @@
             <th>Autor</th>
             <th>Páginas</th>
             <th>Formato</th>
-            <th>Área/Disciplina</th>
+            <th>Especificação</th>
+            <th>Descrição</th>
             <th>Nível</th>
         </tr>
     </thead>
@@ -116,7 +117,8 @@
             <td><?= $livroA->getAutor() ?></td>
             <td><?= $livroA->getPaginas() ?></td>
             <td><?= $livroA->getFormato() ?></td>
-            <td>A-<?= $livroA->getArea() ?></td>
+            <td>Programação</td>
+            <td><?= $livroA->getArea() ?></td>
             <td>#</td>
         </tr>
         <tr>
@@ -124,7 +126,8 @@
             <td><?= $livroB->getAutor() ?></td>
             <td><?= $livroB->getPaginas() ?></td>
             <td><?= $livroB->getFormato() ?></td>
-            <td>D-<?= $livroB->getDisciplina() ?></td>
+            <td>Didatico</td>
+            <td><?= $livroB->getDisciplina() ?></td>
             <td><?= $livroB->getNivel() ?></td>
         </tr>
     </tbody>
