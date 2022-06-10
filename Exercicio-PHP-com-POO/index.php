@@ -7,6 +7,9 @@
     <title>Exemplo 3</title>
 
     <style>
+    body {
+        background-color: rgb(224, 224, 224);
+    }
     table, th, td {
         border: 2px solid black;
         border-collapse: collapse;
@@ -21,7 +24,7 @@
         color: white;
     }
     td {
-        background-color: white;
+        background-color: rgb(245, 245, 245);
     }
     th, td {
         width: 33%;
