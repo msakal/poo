@@ -1,5 +1,6 @@
 <?php
-class Livro {
+
+abstract class Livro {
     // Propriedades (ou atributos)
     private string $titulo;
     private string $autor;
@@ -33,20 +34,20 @@ class Livro {
 
 // Clicando com o botão da direita em cima da propriedade, já cria os get e set dos atributos.
 
-class Joao {
-    private string $nome;
+// class Joao {
+//     private string $nome;
 
    
-    public function getNome(): string
-    {
-        return $this->nome;
-    }
+//     public function getNome(): string
+//     {
+//         return $this->nome;
+//     }
 
    
-    public function setNome(string $nome)
-    {
-        $this->nome = $nome;
+//     public function setNome(string $nome)
+//     {
+//         $this->nome = $nome;
 
-        // return $this;
-    }
-}
+       
+//     }
+// }
