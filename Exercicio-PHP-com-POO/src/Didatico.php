@@ -17,7 +17,7 @@ class Didatico extends Tecnico {
 
     // nivel
     public function getNivel(): string {
-        return implode($this->nivel);
+        return implode(" - ", $this->nivel);
     }
 
    
