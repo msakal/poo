@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 3</title>
+    <title>Exemplo 5</title>
 </head>
 <body>
     <h1>PHP POO - Exemplo 5</h1>
@@ -13,6 +13,7 @@
     <ul>
         <li>Herança</li>
         <li>Classe Abstrata (Não pode ser instanciada)</li>
+        <li>Classe Final</li>
     </ul>
     <hr><hr>
 
@@ -21,10 +22,12 @@
     // Importando a Classe
     // require_once "src/Cliente.php";
     require_once "src/PessoaFisica.php";
-    require_once "src/PessoaJuridica.php";
+    // require_once "src/PessoaJuridica.php";
+    require_once "src/MEI.php";  // subClasse
 
     $clientePF = new PessoaFisica;
     $clientePJ = new PessoaJuridica;
+    $clienteMEI = new MEI;
 
     // Consulta PF
     $clientePF->setNome('Marcello');
@@ -44,6 +47,12 @@
     $clientePJ->setAnoFundacao(1973);
     $clientePJ->setNomeFantasia('CursoTI');
 
+    // MEI
+    $clienteMEI->setNome('Sakal');
+    $clienteMEI->setNomeFantasia('Alemão');
+    $clienteMEI->setCnpj('45.678.987/0001-99');
+    $clienteMEI->setAreaDeAtuacao('Musica');
+
     
 ?>
 <p><strong>Pessoa Física</strong></p>
@@ -51,6 +60,9 @@
 <hr>
 <p><strong>Pessoa Jurídica</strong></p>
 <pre> <?=var_dump($clientePJ)?> </pre>
+<hr>
+<p><strong>MEI</strong></p>
+<pre> <?=var_dump($clienteMEI)?> </pre>
 <hr>
 
 
