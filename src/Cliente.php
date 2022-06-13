@@ -1,5 +1,10 @@
 <?php
 
+// public:       -> nenhuma restrição (todos acessam todos)
+// private:      -> restrição total (só a classe conhece os recursos dela)
+// protected:    -> restrição parcial (recursos acessiveis pela própria classe e pelas subclasses que a herdam)
+
+
 // Criando como classe 'abstract', a classe só pode ser chamada pelas classes dependentes
 // --> NÃO PERMITE SER CHAMADA DE FORMA INDIVIDUAL (DIRETA), não pode ser INSTANCIADAS.
 abstract class Cliente {
@@ -20,7 +25,7 @@ abstract class Cliente {
     public function getSenha():string {
         return $this->senha;
     }
-    public function getSituacao(): string {
+    protected function getSituacao(): string {
         return $this->situacao;
     }
     
@@ -35,7 +40,7 @@ abstract class Cliente {
         $this->senha = password_hash($senha, PASSWORD_DEFAULT);
     }
 
-    public function setSituacao(string $situacao) {
+    protected function setSituacao(string $situacao) {
         $this->situação = $situacao;
     }
 }
