@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 1</title>
+    <title>Exemplo 5</title>
 </head>
 <body>
-    <h1>PHP POO - Exemplo 1</h1>
+    <h1>PHP POO - Exemplo 7</h1>
     <hr>
-    <h2>Assuntos aboraddos:</h2>
+    <h2>Assuntos aborados:</h2>
     <ul>
-        <li>Ciração da classe</li>
-        <li>Importação do arquivo de classe</li>
-        <li>Criação dos objetos</li>
+        <li>Propriedades e Métodos Estáticos</li>
     </ul>
+    <hr><hr>
+
 
 <?php
     // Importando a Classe
-    require_once "src/Cliente.php";
+    // require_once "src/Cliente.php";  // Classe acesada pelas subClasses (PF / PJ)
+    require_once "src/PessoaFisica.php";
+    // require_once "src/PessoaJuridica.php";
+    // require_once "src/MEI.php";  // subClasse
 
-    // Criação dos objetos
-    $clienteA = new Cliente;
-    $clienteB = new Cliente;
+    $clientePF = new PessoaFisica;
+    // Consulta PF
+    $clientePF->setNome('Marcello');
+    $clientePF->setIdade(48);
 
-    echo "<pre>";
-    var_dump($clienteA);
-    echo "</pre>";
+    
+    
+    // Acessando uma propriedade estática
+    PessoaFisica::$cidade = "São Paulo";
 
-    echo "----------------------";
-    echo "<pre>";
-    var_dump($clienteB);
-    echo "</pre>";
+    // Acessando e lendo o valor de uma propriedade estática
+    echo PessoaFisica::$cidade;
+    
 ?>
+
+
+
+<p><strong>Pessoa Física</strong></p>
+<p><?=$clientePF->getNome()?></p>
+<p><?=$clientePF->getIdade()?></p>
+<p>Tipo de Atendimento:
+    <?=PessoaFisica::verificaIdade( $clientePF->getIdade() ) ?>
+</p>
+<hr>
+
+
+
+
 
 </body>
 </html>
