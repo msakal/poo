@@ -32,8 +32,8 @@
 
 
     // use Exercicio as Ex;
-    use Exercicio\ {
-        Tecnico, Programacao, Didatico, Web
+    use Exercicio\{
+        Tecnico, Web
     };
 
 
@@ -74,7 +74,7 @@
 <!-- OpçãoA -->
 <!-- <h3>Resultado:</h3>
 <p>Web:
-    <p><strong>Título: </strong> <?= $livroWeb->getWeb() ?></p>
+    <p><strong>Título: </strong> ?= $livroWeb->getWeb() ?></p>
 </p> -->
 
 
