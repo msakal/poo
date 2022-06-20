@@ -1,5 +1,5 @@
 <?php
-
+namespace Exercicio;
 abstract class Livro {
     // Propriedades (ou atributos)
     private string $titulo;
